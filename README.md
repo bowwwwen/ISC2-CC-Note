@@ -5,4 +5,4 @@
 - [Domain 3：存取控制概念](./Domain%203.md)
 - [Domain 4：網路安全](./Domain%204.md)
 - [Domain 5：安全運營](./Domain%205.md)
-- [錯題筆記](./Domain%206.md)
+- [錯題筆記](./錯題筆記.md)
