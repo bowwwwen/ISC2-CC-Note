@@ -1,86 +1,73 @@
 # Domain 1：資訊安全原則（Security Principles）
 
-## 1.1 了解資訊保障的安全概念（Understand the security concepts of information assurance）
+## 1.1 資訊保障概念（Security Concepts of Information Assurance）
 
-### a. CIA 三要素
-- **機密性（Confidentiality）**：資訊僅對授權者可用，防止未授權存取。
-- **完整性（Integrity）**：資訊未經未授權變更，保持正確性。
-- **可用性（Availability）**：資訊及服務在需要時可被合法用戶取得。
+### CIA 三要素
+- **機密性（Confidentiality）**：資訊僅向授權者揭露，防止未授權存取，措施包括加密、防火牆、身份驗證等。:contentReference[oaicite:1]{index=1}
+- **完整性（Integrity）**：防止資料被未授權或意外修改，措施如雜湊、數位簽章、版本控制。:contentReference[oaicite:2]{index=2}
+- **可用性（Availability）**：確保授權者在需要時能使用資訊，措施包括備援、容錯、災難復原計畫（DRP）。:contentReference[oaicite:3]{index=3}
 
-### b. Personally Identifiable Information（PII）
-- 定義：能單獨或與其他資訊組合後識別個人的資料，如姓名、地址、生日、ID、Email、電話等。
-- PII 的敏感度視組合而定，資料交叉比對越多，越能精確定位個人身分。
+### PII（Personally Identifiable Information）
+- 定義：任何可單獨或經由多種資料組合後識別個人的資訊，例如姓名、地址、生日、電子郵件、身分證號等。:contentReference[oaicite:4]{index=4}
 
-### c. 驗證因素（Authentication Factors）
-1. **Something you know**：如密碼、PIN。
-2. **Something you have**：如智能卡、OTP 裝置。
-3. **Something you are**：如指紋、臉部辨識。
-4. 延伸還包括 **Somewhere you are**（地理位置）、**Something you do**（行為特徵）。
+### 驗證因素（Authentication）
+1. **Something you know**：密碼、PIN。
+2. **Something you have**：如硬體 token、一次性密碼（OTP）。
+3. **Something you are**：如指紋、人臉、虹膜等生物識別。
+- 延伸方式：行為辨識、地理位置等多因素驗證架構。:contentReference[oaicite:5]{index=5}
 
-### d. Non-repudiation（不可否認性）
-- 定義：防止交易雙方事後否認其行為，常見於電子商務、數位簽章等場景。
-- 實現方式：數位簽章、審計日誌、電子簽名等。
+### Non‑repudiation（不可否認性）
+- 確保行為或通訊不能被當事人否認，常使用數位簽章、時間戳記、審計日誌等技術。:contentReference[oaicite:6]{index=6}
 
-### e. 隱私與資料保護法規
-- **HIPAA（Health Insurance Portability and Accountability Act）**
-  - 美國醫療資訊隱私法案，規範 PHI（受保護醫療資訊）的收集、處理、存取與分享。違反可處罰金或監禁。
-- **GDPR（General Data Protection Regulation）**
-  - 歐盟個資保護法，強調資料主體權利，適用於 EU 境內所有人的個資（不論國籍），企業違規可處高額罰款。GDPR 也適用於在 EU 境外處理 EU 居民資料的公司。
-- 其他常見法規還有 FERPA（美國學生教育紀錄保護法），但在 CC 主要強調 HIPAA 與 GDPR。
+### 隱私/資料保護法規（Privacy）
+- **GDPR（歐盟）**：保護 EU 境內的個人資料，不論是否為歐盟公民，包括存取、更正及刪除等基本權利。違規可處高額罰款。:contentReference[oaicite:7]{index=7}
+- **HIPAA（美國）**：保護美國 PHI（受保護的醫療資訊），處理需符合法規；違規可罰款或面臨刑責。:contentReference[oaicite:8]{index=8}
 
 ---
 
-## 1.2 了解風險管理流程（Understand the risk management process）
+## 1.2 風險管理流程（Risk Management Process）
 
-### a. 流程步驟
-1. **風險識別（Risk Identification）**：找出威脅、漏洞及其影響資產的方式。
-2. **風險評估（Risk Assessment）**：評估威脅發生的可能性與影響程度。
-3. **風險處理（Risk Treatment）**：包括避免、降低、轉移（如保險）、接受。
-4. **風險監控與審查（Risk Monitoring and Review）**：持續追蹤風險狀態與控制效果。
-
-### b. 風險容忍度（Risk Tolerance）
-- 由高階管理層（執行長、董事會）決定整個組織可接受的風險範圍。
+1. **識別（Identify）**：找出威脅、漏洞與資產；來源包括內部與外部。:contentReference[oaicite:9]{index=9}  
+2. **評估（Assess）**：依風險可能性與影響按高/中/低或定量分析，並繪製風險矩陣。:contentReference[oaicite:10]{index=10}  
+3. **優先排序（Prioritize）**：根據評估結果，列出優先處理清單，供後續處理及資源安排使用。:contentReference[oaicite:11]{index=11}  
+4. **決策與處理（Decision‑Making & Treatment）**：依優先順序與組織風險容忍度，採取：避免、減緩、轉移、接受。:contentReference[oaicite:12]{index=12}  
+5. **監控與審查（Monitor）**：定期監控、更新風險矩陣與控制效果，並由高階管理層制定風險容忍度。:contentReference[oaicite:13]{index=13}
 
 ---
 
-## 1.3 了解安全控制（Understand security controls）
+## 1.3 安全控制（Security Controls）
 
-### a. 控制類型
-- **技術性控制（Technical）**：如存取控制、防火牆、加密、日誌紀錄。
-- **管理性控制（Administrative）**：如政策、程序、員工訓練、背景調查。
-- **實體性控制（Physical）**：如門禁、警報、CCTV、鎖。
+### 控制類型
+- **技術性**：存取控制、防火牆、IDS/IPS、加密等。
+- **管理性**：政策、程序、培訓、AUP、背景調查。
+- **實體性**：門禁、監視器（CCTV）、保全人員等。:contentReference[oaicite:14]{index=14}
 
-### b. 控制功能分類
-- 預防（Preventive）、偵測（Detective）、矯正（Corrective）、威懾（Deterrent）、補償（Compensating）。
+### 控制功能分類
+- **預防性**（Preventive）：阻止事故發生。
+- **偵測性**（Detective）：監控並識別異常，例：IDS。
+- **矯正/回復性**（Corrective / Recovery）：修復與恢復功能，例：備份、災難復原。
+- **威懾性**（Deterrent）：透過規範、警示抑制行為。
+- **補償性**（Compensating）：當主措施不夠時的替代方案。:contentReference[oaicite:15]{index=15}
 
----
-
-## 1.4 了解 ISC2 道德守則（Understand the ISC2 Code of Ethics）
-
-1. 保護社會與基礎設施
-2. 誠實守法、公正負責
-3. 勤奮盡責
-4. 推動資安專業發展
+### 多層防禦（Defense‑in‑Depth）
+- 構建多層保護架構，避免單一措施成為唯一防線。:contentReference[oaicite:16]{index=16}
 
 ---
 
-## 1.5 了解治理流程（Understand governance processes）
+## 1.4 ISC2 職業道德守則（ISC2 Code of Ethics）
 
-### a. 法規與法律（Regulations & Laws）
-- 由政府機構制訂，最高規範。違反通常有罰則。例如：
-  - **HIPAA**：規範美國醫療資料保護。
-  - **GDPR**：規範歐盟個資保護，影響力及罰則極大。
-- 法規具有強制力，組織必須遵循。
+1. 保護社會與基礎設施  
+2. 誠實、守法、公正與負責任的行為  
+3. 勤奮盡責  
+4. 推動資訊安全專業的發展與分享知識。:contentReference[oaicite:17]{index=17}
 
-### b. 標準（Standards）
-- 規定具體執行細節、格式與技術規範，確保政策落實且一致。
-- 例如：ISO/IEC 27001、NIST 標準等。
+---
 
-### c. 政策（Policies）
-- 組織內部高階制定的原則與規定，指導方向及目標。
+## 1.5 治理流程（Governance Processes）
 
-### d. 程序（Procedures）
-- 詳細描述怎麼執行政策與標準的步驟與方法。
-
-#### 治理正確順序：
-Regulations → Standards → Policies → Procedures
+### 層級關係與順序
+1. **Regulations & Laws**（法規）：具有最高約束力，例：GDPR、HIPAA。
+2. **Standards**（標準）：技術與流程細節，如 ISO 27001、NIST。
+3. **Policies**（政策）：組織內部的目標與原則。
+4. **Procedures**（程序）：執行政策的具體步驟與方法。
+- 順序**Regulations → Standards → Policies → Procedures** :contentReference[oaicite:18]{index=18}
